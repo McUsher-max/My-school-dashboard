@@ -40,4 +40,5 @@ st.write(class_counts)
 # Attendance
 st.header("🕒 Attendance Summary")
 attendance_summary = attendance.groupby("status").size().reset_index(name="Count")
-fig_attendance = px.pie(attendance_summary, names="status", values="Count", title
+fig_attendance = px.pie(attendance_summary, names="status", values="Count", title="Attendance Breakdown")
+st.plotly_chart(fig_attendance)
